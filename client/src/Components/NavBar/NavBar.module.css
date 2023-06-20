@@ -1,0 +1,8 @@
+.contenedor{
+    border: solid black 1px;
+    width: auto;
+    position: relative;
+    height: 50px;
+    background-color: black;
+    color:white;
+}
