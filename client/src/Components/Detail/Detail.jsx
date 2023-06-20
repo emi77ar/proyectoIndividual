@@ -28,7 +28,18 @@ const Detail = ()=>{
 
 return(
     <div className={style.contenedor} >
-        <h1>{game.name}</h1>
+        <img className={style.img} src={game.background_image} />
+        <ul>
+            <li>{game.id}</li>
+            <li>{game.name}</li>
+            <li>{game.description_raw}</li>
+            <li>{game.released}</li>
+            <li>{game.rating}</li>
+            <li>{game.genres?.map((genre)=>genre.name).join(", ")}</li>
+            <li>{game.platforms?.map((platform)=>platform.platform.name).join(", ")} </li>
+            
+        </ul>
+
     </div>
 )
 
