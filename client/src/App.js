@@ -8,6 +8,7 @@ import { Inicio } from './Components/Inicio/inicio';
 import Cards from './Components/Cards/Cards';
 import { useLocation } from 'react-router-dom';
 import Nav from './Components/NavBar/NavBar';
+import Detail from './Components/Detail/Detail';
 import axios from 'axios';
 
 
@@ -49,6 +50,7 @@ useEffect(()=>{
     <Routes>
       <Route path='/' element={<Inicio/>} />
       <Route path='/videogames' element={<Cards videogames={videogames} />} />
+      <Route path='/videogames/:id' element={<Detail/>}/>
     </Routes>
 
 

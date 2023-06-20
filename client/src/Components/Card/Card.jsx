@@ -1,4 +1,5 @@
 import style from './Card.module.css';
+import { Link } from 'react-router-dom';
 
 const Card = ({background_image,id,name})=>{
 
@@ -7,8 +8,11 @@ const Card = ({background_image,id,name})=>{
 
             <img className={style.image} src={background_image} />
             <h2>{name}</h2>
+            <Link to={`/videogames/${id}`}  >
             <h2>{id}</h2>            
-        </div>
+        
+            </Link>
+            </div>
     )
 
 }
