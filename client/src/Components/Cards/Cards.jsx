@@ -3,15 +3,12 @@ import Card from '../Card/Card';
 import { Link } from 'react-router-dom';
 
 export default function Cards({videogames}){
-    
-    for(let i = 0; i>15;i++){
-
-    }
+  
     
     return(
         <div className={style.contenedor} >
-  
-        
+ {console.log(videogames.length)}
+
         {videogames.map((game)=>{
             return(
                 <Card 
@@ -24,7 +21,9 @@ export default function Cards({videogames}){
 
             )
         })}
-
+       
+         
         </div>
+        
     )
 }
