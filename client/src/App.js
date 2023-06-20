@@ -49,7 +49,7 @@ useEffect(()=>{
    {showNav && <Nav/>}
     <Routes>
       <Route path='/' element={<Inicio/>} />
-      <Route path='/videogames' element={<Cards videogames={videogames} />} />
+      <Route path='/videogames/page' element={<Cards videogames={videogames} />} />
       <Route path='/videogames/:id' element={<Detail/>}/>
     </Routes>
 
