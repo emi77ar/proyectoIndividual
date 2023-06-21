@@ -3,7 +3,9 @@ const { Videogames } = require('../db')
 
 const URL = "https://api.rawg.io/api/games?key=e0da9040ec2e437588b919e3b2dfdaad"
 
-const allVideogames = async(req, res)=>{
+
+
+const allVideogames = async( p)=>{
     //buscar en la bdd
     const databaseGames = await Videogames.findAll();
 
@@ -15,7 +17,6 @@ const allVideogames = async(req, res)=>{
     }
     
     misJuegos = [...misJuegos, ...databaseGames];
-
     
     console.log(misJuegos.length)
     return misJuegos;

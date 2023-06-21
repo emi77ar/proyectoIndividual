@@ -1,5 +1,6 @@
 import './App.css';
 import { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 
 //import { Link, NavLink } from 'react-router-dom/cjs/react-router-dom.min';
 import {Route, Routes} from 'react-router-dom';
@@ -10,10 +11,11 @@ import { useLocation } from 'react-router-dom';
 import Nav from './Components/NavBar/NavBar';
 import Detail from './Components/Detail/Detail';
 import axios from 'axios';
+import { getVideogames, orderCards } from './Redux/actions';
 
 
 function App() {
-
+/*
 const [videogames, setVideogames] = useState([]);
 
 async function onSearch(){
@@ -36,6 +38,14 @@ useEffect(()=>{
   onSearch();
 },[])
 
+*/
+const dispatch = useDispatch();
+
+useEffect(()=>{
+  dispatch(getVideogames())
+  
+},[])
+
 
   const location = useLocation();
   const showNav = location.pathname !== '/';
@@ -48,8 +58,8 @@ useEffect(()=>{
 
    {showNav && <Nav/>}
     <Routes>
-      <Route path='/' element={<Inicio/>} />
-      <Route path='/videogames/' element={<Cards videogames={videogames} />} />
+      <Route exact path='/' element={<Inicio/>} />
+      <Route path='/videogames/' element={<Cards/>} />
       <Route path='/videogames/:id' element={<Detail/>}/>
     </Routes>
 

@@ -2,13 +2,13 @@
     border: solid black 1px;
     width: auto;
     position: relative;
-    height: 80px;
+    height: 110px;
     background-color: black;
     color:white;
     align-items: center;
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-around;
+    flex-direction: row;
     
 }
 .paginas{
@@ -20,4 +20,9 @@
     font-size: small;
     gap: 20px;
     color:white;
+}
+.selector{
+    display: flex;
+    position:relative;
+    top:15px;
 }

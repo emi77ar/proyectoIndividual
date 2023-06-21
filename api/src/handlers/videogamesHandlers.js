@@ -3,7 +3,9 @@ const {createGame, getVideogameById, getVideogamesName, allVideogames} = require
 
 
 const videogamesHandler = async (req, res)=>{
-    const { name } = req.query;
+    const { name, p } = req.query;
+  
+
     try {
     if(name){
         name.toLowerCase();
@@ -11,9 +13,13 @@ const videogamesHandler = async (req, res)=>{
         res.status(200).send(games);
 
     }else {
-        const games = await allVideogames();
+    
+
+        const games = await allVideogames(p);
+
 
         res.status(200).send(games)
+  
     }
     
     } catch (error) {
