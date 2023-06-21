@@ -4,6 +4,7 @@ const genresHandler = async (req, res)=>{
 
     try {
         const genresGames = await gameGenres();
+        console.log(genresGames)
         res.status(200).send(genresGames)
     } catch (error) {
         res.status(400).send(error.message);
